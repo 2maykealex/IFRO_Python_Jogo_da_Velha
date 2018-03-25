@@ -1,26 +1,23 @@
-# jogo da Velha
-
-#SÓ ACEITAR DE 1 A 9  - OUTRAS TEM QUE SER BLOQUEADAS  - ok
-#bloquear entrada dupla  - OK
-#ganhador - OK
-#limpar a tela a cada jogada. - ok
-#entrada com 1 dígito usando a classe getch
-#repetição para uma nova partida
+# JOGO DA VELHA
+# FEITO EM UM TRABALHO DE P.O.O, DO CURSO DE TÉCNICO EM INFORMÁTICA PARA INTERNET
+# PROF. ANDERSON
+# INSTITUTO FEDERAL DE RONDÔNIA - ZONA NORTE - PORTO VELHO
 
 
+# SÓ ACEITA ENTRADAS DE 1 A 9
+# BLOQUEADA ENTRADA DUPLA
+# RECONSTROI A TELA A CADA NOVA JOGADA, DANDO IMPRESSÃO DE CONTINUIDADE DO JOGO
+# PODE SER JOGADA VÁRIAS PARTIDAS.
 
-# erro do ESC
-#fazer com 2 player (um para o teclado alfabético e o outro para o teclado numérico)
+#####FALTA FAZER FUNÇÃO MULTIPLAYER
 
 import os;
 import get;
 
 
-
-
 clear = lambda: os.system('cls')   #Cria uma funcão anônima
 
-def verificaPosicao(pos):
+def verificaPosicao(pos):  #A CADA JOGADA VERIFICA SE A POSIÇÃO JÁ FOI UTILIZADA
     if velha1[pos] == " ":
         return 1 #verdadeiro
     else:
@@ -71,7 +68,7 @@ def mostraVelha():  # Mostra o desenho da Velha e instruções
     print('\n')
 
 
-def verificaGanhador(jogador):  #verifica se o Jogador ganhou
+def verificaGanhador(jogador):  #verifica se o Jogador ganhou a cada jogada
     if   velha1[0] == jogador and velha1[1] == jogador and velha1[2] == jogador :
         return 1
     elif velha1[3] == jogador and velha1[4] == jogador and velha1[5] == jogador :
